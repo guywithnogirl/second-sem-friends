@@ -18,5 +18,11 @@ jobs:
       - name: Compile
         run: javac *.java
 
-      - name: Run
-        run: java Main
+      - name: Run Programs
+        run: |
+          for file in program*.java
+          do
+            classname=$(basename $file .java)
+            echo "Running $classname"
+            java $classname
+          done
