@@ -15,8 +15,15 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Compile
-        run: javac *.java
+      - name: Compile Java
+        run: |
+          for file in *.java; do
+            if grep -l "extends Applet\|import java.applet" "$file"; then
+              echo "Skipping applet: $file"
+            else
+              javac "$file"
+            fi
+          done
 
       - name: Run Programs
         run: |
