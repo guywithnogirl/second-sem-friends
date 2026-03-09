@@ -27,8 +27,11 @@ jobs:
 
       - name: Run Programs
         run: |
-          for file in program*.java
-          do
+          for file in program*.java do
+          if grep -q "extends Applet\|import java.applet" "$file"; then
+              echo "Skipping applet: $file"
+              continue
+          fi
             classname=$(basename $file .java)
             echo "Running $classname"
             java $classname
