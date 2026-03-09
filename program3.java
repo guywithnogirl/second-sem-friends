@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.Collections;
-class DescendingSort {
+public class program3 {
   public static void main(String[] args) {
     // Sample array
     Integer[] arr = {10, 5, 20, 7, 3, 15};

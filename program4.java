@@ -1,4 +1,4 @@
-class OverloadExample {
+public class program4 {
   // Method to add two integers
   int add(int a, int b) {
     return a + b;
@@ -14,7 +14,7 @@ class OverloadExample {
   }
 
   public static void main(String[] args) {
-    OverloadExample obj = new OverloadExample();
+    program4 obj = new program4();
 
     System.out.println("Addition of two integers: " + obj.add(10, 20));
     System.out.println("Addition of three integers: " + obj.add(5, 10, 15));

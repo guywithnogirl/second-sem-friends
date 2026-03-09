@@ -1,4 +1,4 @@
-class Factorial {
+public class program1 {
   public static void main(String[] args) {
     // Check if user provided an argument
     if (args.length == 0) {
